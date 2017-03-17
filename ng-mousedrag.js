@@ -21,7 +21,7 @@
           startY = e.pageY;
           e.startX = startX;
           e.startY = startY;
-          e.type = 'start';
+          e.eventType = 'start';
           scope.$event = e;
           scope.$eval(attrs.ngMousedrag);
 
@@ -32,7 +32,7 @@
             e.startY = startY;
             endX = e.dragX;
             endY = e.dragY;
-            e.type = 'move';
+            e.eventType = 'move';
             scope.$event = e;
             scope.$eval(attrs.ngMousedrag);
           });
@@ -44,7 +44,7 @@
             e.startY = startY;
             e.endX = endX;
             e.endY = endY;
-            e.type = 'end';
+            e.eventType = 'end';
             scope.$event = e;
             scope.$eval(attrs.ngMousedrag);
           });
